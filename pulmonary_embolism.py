@@ -14,7 +14,7 @@ import urllib.request
 import shutil
 import matplotlib as mpl
 
-mpl.use('TkAgg')
+#mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 
 # Root directory of the project
@@ -358,7 +358,7 @@ if __name__ == "__main__":
         MODEL_PATH = args.model
         print("Loading weights from ", MODEL_PATH)
 
-        model.load_weights(COCO_MODEL_PATH, by_name=True,
+        model.load_weights(MODEL_PATH, by_name=True,
                            exclude=["mrcnn_class_logits", "mrcnn_bbox_fc",
                                     "mrcnn_bbox", "mrcnn_mask"])
         print("finish")
